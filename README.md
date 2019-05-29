@@ -27,6 +27,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 15900
 9. Remove Last= 8700
 10. Size= 5700
+
 ========HashTable========
 1. Add First= 11400
 2. Add Middle= 400
@@ -38,6 +39,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 6900
 9. Remove Last= 6700
 10. Size= 6000
+
 ========HashMap========
 1. Add First= 38600
 2. Add Middle= 100
@@ -49,6 +51,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 8500
 9. Remove Last= 6600
 10. Size= 5200
+
 ========LinkedHashMap========
 1. Add First= 51800
 2. Add Middle= 9900
@@ -79,6 +82,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 2099701
 9. Remove Last= 1509000
 10. Size= 5799
+
 ========VectorList========
 1. Add First= 11201
 2. Add Middle= 600
@@ -90,6 +94,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 1871100
 9. Remove Last= 1602400
 10. Size= 7599
+
 ========LinkedList========
 1. Add First= 33499
 2. Add Middle= 101
@@ -101,6 +106,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 2051900
 9. Remove Last= 1608900
 10. Size= 7700
+
 ========StackList========
 1. Add First= 34701
 2. Add Middle= 7000
@@ -130,6 +136,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 8600
 9. Remove Last= 7100
 10. Size= 8400
+
 ========HashSet========
 1. Add First= 13100
 2. Add Middle= 7000
@@ -141,6 +148,7 @@ Data Structure - Understanding data structure in Java
 8. Remove Middle= 7700
 9. Remove Last= 5600
 10. Size= 6000
+
 ========LinkedHashSet========
 1. Add First= 67600
 2. Add Middle= 7100
