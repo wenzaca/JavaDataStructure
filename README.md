@@ -164,6 +164,8 @@ Data Structure - Understanding data structure in Java
 ## Sorts 
 
 - BubbleSort
+- InsertionSort
+- SelectionSort
 
 ## OOO
 
