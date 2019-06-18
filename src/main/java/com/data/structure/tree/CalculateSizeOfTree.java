@@ -2,21 +2,23 @@ package com.data.structure.tree;
 
 import java.util.Scanner;
 
-public class MaximumElemTree {
+public class CalculateSizeOfTree {
 
-    public static int maxInt(Node root) {
-
-        if (root.left == null && root.right == null) return root.data;
-
-        int left = Integer.MIN_VALUE, right = Integer.MIN_VALUE;
-        if (root.left != null) {
-            left = Math.max(maxInt(root.left), root.data);
-        }
-        if (root.right != null) {
-            right = Math.max(maxInt(root.right), root.data);
-        }
-        return Math.max(Math.max(right, left), root.data);
+    public static int calculateSize(Node root){
+        return calculateSize(root, 0) + 1;
     }
+
+    public static int calculateSize(Node root, int size){
+
+        if(root.left != null){
+            size = calculateSize(root.left, size+1);
+        }
+        if(root.right != null){
+            size = calculateSize(root.right, size+1);
+        }
+        return size;
+    }
+
 
     public static Node insert(Node root, int data) {
         if (root == null) {
@@ -43,7 +45,6 @@ public class MaximumElemTree {
             root = insert(root, data);
         }
         scan.close();
-        System.out.println(maxInt(root));
+        System.out.println(calculateSize(root));
     }
 }
-

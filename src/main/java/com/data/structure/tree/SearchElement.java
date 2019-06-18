@@ -2,20 +2,13 @@ package com.data.structure.tree;
 
 import java.util.Scanner;
 
-public class MaximumElemTree {
+public class SearchElement {
 
-    public static int maxInt(Node root) {
+    public static Boolean findElement(Node root, int desiredElem){
 
-        if (root.left == null && root.right == null) return root.data;
+        if (root.data == desiredElem) return true;
 
-        int left = Integer.MIN_VALUE, right = Integer.MIN_VALUE;
-        if (root.left != null) {
-            left = Math.max(maxInt(root.left), root.data);
-        }
-        if (root.right != null) {
-            right = Math.max(maxInt(root.right), root.data);
-        }
-        return Math.max(Math.max(right, left), root.data);
+        return root.left != null ? findElement(root.left, desiredElem) : false || root.right != null ? findElement(root.right, desiredElem) : false;
     }
 
     public static Node insert(Node root, int data) {
@@ -42,8 +35,10 @@ public class MaximumElemTree {
             int data = scan.nextInt();
             root = insert(root, data);
         }
+        System.out.print("\nType the desired element: ");
+        int elem = scan.nextInt();
         scan.close();
-        System.out.println(maxInt(root));
+        System.out.println(findElement(root, elem));
     }
 }
 
