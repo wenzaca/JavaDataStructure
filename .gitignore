@@ -3,4 +3,5 @@ gradlew*
 build
 out
 gradle
+.idea*
 *.xml
