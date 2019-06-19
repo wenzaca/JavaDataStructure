@@ -1,22 +1,36 @@
 package com.data.structure.tree;
 
+import java.util.ArrayDeque;
 import java.util.Scanner;
 
-public class CalculateSizeOfTree {
+public class FindTheHeightOfTree {
 
-    public static int calculateSize(Node root){
-        return calculateSize(root, 0) + 1;
-    }
+    public static int fillStack(Node root){
 
-    private static int calculateSize(Node root, int size){
+        int size = CalculateSizeOfTree.calculateSize(root);
+        ArrayDeque<Node> stack = new ArrayDeque<>(size);
 
-        if(root.left != null){
-            size = calculateSize(root.left, size+1);
+        int height = 0;
+        stack.addFirst(root);
+
+        while(!stack.isEmpty()){
+            int counter = 0;
+            int lastSize = stack.size();
+            while(counter<lastSize){
+                root = stack.pop();
+                if(root.right!=null){
+                    stack.addLast(root.right);
+                }
+                if(root.left!=null){
+                    stack.addLast(root.left);
+                }
+
+                counter++;
+            }
+            height++;
         }
-        if(root.right != null){
-            size = calculateSize(root.right, size+1);
-        }
-        return size;
+
+        return height-1;
     }
 
 
@@ -45,6 +59,6 @@ public class CalculateSizeOfTree {
             root = insert(root, data);
         }
         scan.close();
-        System.out.println(calculateSize(root));
+        System.out.println(fillStack(root));
     }
 }
